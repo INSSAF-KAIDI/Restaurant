@@ -10,6 +10,8 @@
 </head>
 <body>
 
+    <div class="page-wrapper">
+        <div class="content container-fluid">
 
     <div class="container ">
         <div class="d-flex justify-content-between py-3">
@@ -48,7 +50,7 @@
 
         </form>
     </div>
-
-
+        </div>
+    </div>
 </body>
 </html>

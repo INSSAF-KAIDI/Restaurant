@@ -78,8 +78,6 @@ class LoginController extends Controller
             Session::put('status', $user->status);
             Session::put('role_name', $user->role_name);
             Session::put('avatar', $user->avatar);
-            Session::put('position', $user->position);
-            Session::put('department', $user->department);
 
             $activityLog = ['name'=> Session::get('name'),'email'=> $username,'description' => 'Has log in','date_time'=> $todayDate,];
             DB::table('activity_logs')->insert($activityLog);
@@ -108,8 +106,6 @@ class LoginController extends Controller
         $request->session()->forget('status');
         $request->session()->forget('role_name');
         $request->session()->forget('avatar');
-        $request->session()->forget('position');
-        $request->session()->forget('department');
         $request->session()->flush();
         Auth::logout();
         Toastr::success('Logout successfully :)','Success');

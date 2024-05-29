@@ -27,24 +27,26 @@
                     </li>
 
                 @endif
-                <li class="{{set_active(['all/employee/list','all/employee/list','all/employee/card','form/holidays/new','form/leaves/new',
+                <li class="{{set_active(['all/employee/list','all/employee/list','serveurs/create','serveurs/index','all/employee/card','form/holidays/new','form/leaves/new',
                     'form/leavesemployee/new','form/leavesettings/page','attendance/page',
                     'attendance/employee/page','form/departments/page','form/designations/page',
                     'form/timesheet/page','form/shiftscheduling/page','form/overtime/page'])}} submenu">
-                    <a href="#" class="{{ set_active(['all/employee/list','all/employee/card','form/holidays/new','form/leaves/new',
+                    <a href="#" class="{{ set_active(['all/employee/list','serveurs/create','serveurs/index','all/employee/card','form/holidays/new','form/leaves/new',
                     'form/leavesemployee/new','form/leavesettings/page','attendance/page',
                     'attendance/employee/page','form/departments/page','form/designations/page',
                     'form/timesheet/page','form/shiftscheduling/page','form/overtime/page']) ? 'noti-dot' : '' }}">
-                        <i class="la la-user"></i> <span> Serveurs</span> <span class="menu-arrow"></span>
+                        <i class="la la-user"></i> <span> G.R.H </span> <span class="menu-arrow"></span>
                     </a>
                     <ul style="{{ request()->is('/*') ? 'display: block;' : 'display: none;' }}">
-                        <li><a class="{{set_active(['all/employee/list','all/employee/card'])}}" href="{{ route('all/employee/card') }}">Tous Serveurs</a></li>
+                        <li><a class="{{set_active(['all/employee/list','all/employee/card'])}}" href="{{ route('all/employee/card') }}">All Employees</a></li>
+                        <li><a class="{{set_active(['serveurs.create'])}}" href="{{ route('serveurs.create') }}">Ajouter Serveur</a></li>
+                        <li><a class="{{set_active(['serveurs.index'])}}" href="{{ route('serveurs.index') }}">Liste Serveurs</a></li>
                         <li><a class="{{set_active(['form/holidays/new'])}}" href="{{ route('form/holidays/new') }}">congés </a></li>
-                        <li><a class="{{set_active(['form/leaves/new'])}}" href="{{ route('form/leaves/new') }}">Congés (Admin)<span class="badge badge-pill bg-primary float-right">1</span></a></li>
-                        <li><a class="{{set_active(['form/leavesemployee/new'])}}" href="{{route('form/leavesemployee/new')}}">Congés (Serveur)</a></li>
+                        <li><a class="{{set_active(['form/leaves/new'])}}" href="{{ route('form/leaves/new') }}">Congés (Admins)<span class="badge badge-pill bg-primary float-right">1</span></a></li>
+                        <li><a class="{{set_active(['form/leavesemployee/new'])}}" href="{{route('form/leavesemployee/new')}}">Congés (Serveurs)</a></li>
                         <li><a class="{{set_active(['form/leavesettings/page'])}}" href="{{ route('form/leavesettings/page') }}">Paramètres Congés </a></li>
-                        <li><a class="{{set_active(['attendance/page'])}}" href="{{ route('attendance/page') }}">Présence (Admin)</a></li>
-                        <li><a class="{{set_active(['attendance/employee/page'])}}" href="{{ route('attendance/employee/page') }}">Présence (Serveur)</a></li>
+                        <li><a class="{{set_active(['attendance/page'])}}" href="{{ route('attendance/page') }}">Présence (Admins)</a></li>
+                        <li><a class="{{set_active(['attendance/employee/page'])}}" href="{{ route('attendance/employee/page') }}">Présence (Serveurs)</a></li>
                         <li><a class="{{set_active(['form/timesheet/page'])}}" href="{{ route('form/timesheet/page') }}">Timesheet</a></li>
                         <li><a class="{{set_active(['form/shiftscheduling/page'])}}" href="{{ route('form/shiftscheduling/page') }}">Emploi du Temps</a></li>
                         <li><a class="{{set_active(['form/overtime/page'])}}" href="{{ route('form/overtime/page') }}">Overtime</a></li>
@@ -59,14 +61,73 @@
                     </ul>
                 </li>
 
+                <li class="{{ set_active(['categories/create','categories/index', 'alimentaire/create','alimentaire/index','sizealimentaire/index','sizealimentaire/create','sizes/create','sizes/index']) }} submenu">
+                    <a href="#" class="{{ set_active(['categories/create','categories/index', 'alimentaire/create','alimentaire/index','sizealimentaire/index','sizealimentaire/create','sizes/create','sizes/index']) ? 'noti-dot' : '' }}">
+                        <i class="la la-comment"></i>
+                        <span> Articles </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul style="{{ request()->is('/*') ? 'display: block;' : 'display: none;' }}">
+                        <li class="submenu">
+                            <a href="#" class="{{ set_active(['categories/create','categories/index']) ? 'noti-dot' : '' }}">
+                                <span> Gérer Category </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul style="{{ request()->is('categories/*') ? 'display: block;' : 'display: none;' }}">
+                                <li><a class="@active('categories.create')" href="{{ route('categories.create') }}">Nouveau category</a></li>
+                                <li><a class="@active('categories.index')" href="{{ route('categories.index') }}">Liste des category</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#" class="{{ set_active(['another-submenu']) ? 'noti-dot' : '' }}">
+                                <span> Alimentaire </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul style="{{ request()->is('alimentaires/*') ? 'display: block;' : 'display: none;' }}">
+                                <li><a class="@active('alimentaire.create')" href="{{ route('alimentaire.create') }}">Nouveau </a></li>
+                                <li><a class="@active('alimentaire.index')" href="{{ route('alimentaire.index') }}">Liste</a></li>
+                                <li><a class="@active('sizes.create')" href="{{ route('sizes.create') }}">Ajouter Size</a></li>
+                                <li><a class="@active('sizealimentaire.index')" href="{{ route('sizealimentaire.index') }}">Size Alimentaire</a></li>
+
+
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+
+
+
+
+                <li class="{{set_active(['Ligne_Achats/create','Ligne_Achats/index'])}} submenu">
+                    <a href="#" class="{{ set_active(['Ligne_Achats/create','Ligne_Achats/index']) ? 'noti-dot' : '' }}"><i class="la la-pencil-square"></i>
+                    <span> Achats</span><span class="menu-arrow"></span></a>
+                    <ul style="{{ request()->is('/*') ? 'display: block;' : 'display: none;' }}">
+                        <li><a class="@active('Ligne_Achats.create')" href="{{ route('Ligne_Achats.create') }}">Ajouter Achat</a></li>
+                        <li><a class="@active('Ligne_Achats.index')" href="{{ route('Ligne_Achats.index') }}">Liste des Achats</a></li>
+                    </ul>
+                </li>
+
                 <li class="{{set_active(['commande/create','commande/index'])}} submenu">
                     <a href="#" class="{{ set_active(['commande/create','commande/index']) ? 'noti-dot' : '' }}"><i class="la la-money"></i>
-                    <span> Commande </span> <span class="menu-arrow"></span></a>
+                    <span> Commandes </span> <span class="menu-arrow"></span></a>
                     <ul style="{{ request()->is('/*') ? 'display: block;' : 'display: none;' }}">
                         <li><a class="{{set_active(['commande.create'])}}" href="{{ route('commande.create') }}"> Ajouter Commande </a></li>
                         <li><a class="{{set_active(['commande.index'])}}" href="{{ route('commande.index') }}"> Liste Commandes </a></li>
                     </ul>
                 </li>
+
+                <li class="{{set_active(['tables/create','reservation/create','reservation/index'])}} submenu">
+                    <a href="#" class="{{ set_active(['reservation/create','reservation/index']) ? 'noti-dot' : '' }}"><i class="la la-money"></i>
+                    <span> Reservations </span> <span class="menu-arrow"></span></a>
+                    <ul style="{{ request()->is('/*') ? 'display: block;' : 'display: none;' }}">
+                        <li><a class="{{set_active(['tables.create'])}}" href="{{ route('tables.create') }}">Ajouter Table </a></li>
+                        <li><a class="{{set_active(['tables.index'])}}" href="{{ route('tables.index') }}">Liste Tables </a></li>
+                        <li><a class="{{set_active(['reservation.create'])}}" href="{{ route('reservation.create') }}"> Ajouter Reservation </a></li>
+                        <li><a class="{{set_active(['reservation.index'])}}" href="{{ route('reservation.index') }}"> Liste Reservations </a></li>
+                    </ul>
+                </li>
+
                 <li class="{{set_active(['form/expense/reports/page','form/invoice/reports/page','form/leave/reports/page','form/daily/reports/page'])}} submenu">
                     <a href="#" class="{{ set_active(['form/expense/reports/page','form/invoice/reports/page','form/leave/reports/page','form/daily/reports/page']) ? 'noti-dot' : '' }}"><i class="la la-pie-chart"></i>
                     <span> Rapports </span> <span class="menu-arrow"></span></a>
@@ -105,7 +166,7 @@
                         <span> Profil </span> <span class="menu-arrow"></span>
                     </a>
                     <ul style="display: none;">
-                        <li><a class="{{set_active(['employee/profile/*'])}}" href="{{ route('all/employee/list') }}"> Serveur Profil </a></li>
+                        <li><a class="{{set_active(['employee/profile/*'])}}" href="{{ route('all/employee/list') }}"> Employee Profil </a></li>
                     </ul>
                 </li>
             </ul>

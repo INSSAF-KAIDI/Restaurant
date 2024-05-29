@@ -1,3 +1,9 @@
+@extends('layouts.master')
+
+@section('title', 'Home Category List')
+
+@section('content')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +15,8 @@
 
 </head>
 <body>
+    <div class="page-wrapper">
+        <div class="content container-fluid">
 
 
     <div class="container ">
@@ -30,7 +38,8 @@
                 <table class="table table-striped">
                     <tr>
                         <th width="30">ID</th>
-                        <th>CategoryAlimentaire</th>
+                        <th>Nom Category</th>
+                        <th>Nom d'Aliment</th>
                         <th>Description</th>
                         <th>Status</th>
                         <th>Image</th>
@@ -42,7 +51,8 @@
                     @foreach ($alimentaires as $alimentaire)
                     <tr valign="middle">
                         <td>{{ $alimentaire->id }}</td>
-                        <td>{{ $alimentaire && $alimentaire->categoryalimentaire && $alimentaire->categoryalimentaire->CategoryAlimentaire != "" ? $alimentaire->categoryalimentaire->CategoryAlimentaire : '-- aucun --' }}</td>
+                        <td>{{ $alimentaire && $alimentaire->category && $alimentaire->category->NomCategory != "" ? $alimentaire->category->NomCategory : '-- aucun --' }}</td>
+                        <td>{{ $alimentaire->nomAliment }}</td>
                         <td>{{ $alimentaire->description }}</td>
                         <td>{{ $alimentaire->status }}</td>
                         <td>
@@ -79,10 +89,12 @@
         </div>
 
     </div>
-
+        </div>
+    </div>
 
 </body>
 </html>
+
 <script>
     function deleteAlimentaire(id) {
         if (confirm("Are you sure you want to delete?")) {
@@ -90,3 +102,5 @@
         }
     }
 </script>
+
+@endsection

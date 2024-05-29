@@ -19,8 +19,7 @@ class CreateEmployeesTable extends Migration
             $table->string('email')->nullable();
             $table->string('birth_date')->nullable();
             $table->string('gender')->nullable();
-            $table->string('employee_id')->nullable();
-            $table->string('company')->nullable();
+            $table->string('serveur_id')->nullable();
             $table->timestamps();
         });
     }

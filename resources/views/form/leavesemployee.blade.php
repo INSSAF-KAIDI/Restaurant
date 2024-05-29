@@ -9,66 +9,66 @@
             <div class="page-header">
                 <div class="row align-items-center">
                     <div class="col">
-                        <h3 class="page-title">Leaves <span id="year"></span></h3>
+                        <h3 class="page-title">Congés <span id="year"></span></h3>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Leaves</li>
+                            <li class="breadcrumb-item active">Congés</li>
                         </ul>
                     </div>
                     <div class="col-auto float-right ml-auto">
-                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_leave"><i class="fa fa-plus"></i> Add Leave</a>
+                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_Congés"><i class="fa fa-plus"></i> Ajouter Congé</a>
                     </div>
                 </div>
             </div>
-            
-            <!-- Leave Statistics -->
+
+            <!-- Congés Statistics -->
             <div class="row">
                 <div class="col-md-3">
                     <div class="stats-info">
-                        <h6>Annual Leave</h6>
+                        <h6>Congés Annuel </h6>
                         <h4>12</h4>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="stats-info">
-                        <h6>Medical Leave</h6>
+                        <h6>Congés Medical</h6>
                         <h4>3</h4>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="stats-info">
-                        <h6>Other Leave</h6>
+                        <h6>Autre Congés</h6>
                         <h4>4</h4>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="stats-info">
-                        <h6>Remaining Leave</h6>
+                        <h6> Congés Restant</h6>
                         <h4>5</h4>
                     </div>
                 </div>
             </div>
-            <!-- /Leave Statistics -->
-            
+            <!-- /Congés Statistics -->
+
             <div class="row">
                 <div class="col-md-12">
                     <div class="table-responsive">
                         <table class="table table-striped custom-table mb-0 datatable">
                             <thead>
                                 <tr>
-                                    <th>Leave Type</th>
+                                    <th>Type Congés </th>
                                     <th>From</th>
                                     <th>To</th>
-                                    <th>No of Days</th>
-                                    <th>Reason</th>
+                                    <th>Nbr de Jours</th>
+                                    <th>Raison</th>
                                     <th class="text-center">Status</th>
-                                    <th>Approved by</th>
+                                    <th>Approuvé par</th>
                                     <th class="text-right">Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Casual Leave</td>
+                                    <td>Congés occasionnel</td>
                                     <td>8 Mar 2019</td>
                                     <td>9 Mar 2019</td>
                                     <td>2 days</td>
@@ -90,14 +90,14 @@
                                         <div class="dropdown dropdown-action">
                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_leave"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_Congés"><i class="fa fa-pencil m-r-5"></i> Edit</a>
                                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_approve"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
                                             </div>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Casual Leave</td>
+                                    <td>Congés occasionnel</td>
                                     <td>10 Jan 2019</td>
                                     <td>10 Jan 2019</td>
                                     <td>First Half</td>
@@ -119,7 +119,7 @@
                                         <div class="dropdown dropdown-action">
                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_leave"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_Congés"><i class="fa fa-pencil m-r-5"></i> Edit</a>
                                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_approve"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
                                             </div>
                                         </div>
@@ -130,16 +130,16 @@
                     </div>
                 </div>
             </div>
-              
+
         </div>
         <!-- /Page Content -->
-       
-		<!-- Add Leave Modal -->
-        <div id="add_leave" class="modal custom-modal fade" role="dialog">
+
+		<!-- Add Congés Modal -->
+        <div id="add_Congés" class="modal custom-modal fade" role="dialog">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Add Leave</h5>
+                        <h5 class="modal-title">Ajouter Congés</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -147,11 +147,11 @@
                     <div class="modal-body">
                         <form>
                             <div class="form-group">
-                                <label>Leave Type <span class="text-danger">*</span></label>
+                                <label>Type Congés <span class="text-danger">*</span></label>
                                 <select class="select">
-                                    <option>Select Leave Type</option>
-                                    <option>Casual Leave 12 Days</option>
-                                    <option>Medical Leave</option>
+                                    <option>Select Type Congés </option>
+                                    <option>Congés occasionnel 12 jr</option>
+                                    <option>Congés Medical </option>
                                     <option>Loss of Pay</option>
                                 </select>
                             </div>
@@ -168,15 +168,15 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label>Number of days <span class="text-danger">*</span></label>
+                                <label>Nbr de jr <span class="text-danger">*</span></label>
                                 <input class="form-control" readonly type="text">
                             </div>
                             <div class="form-group">
-                                <label>Remaining Leaves <span class="text-danger">*</span></label>
+                                <label>Congés restant <span class="text-danger">*</span></label>
                                 <input class="form-control" readonly value="12" type="text">
                             </div>
                             <div class="form-group">
-                                <label>Leave Reason <span class="text-danger">*</span></label>
+                                <label>Raison <span class="text-danger">*</span></label>
                                 <textarea rows="4" class="form-control"></textarea>
                             </div>
                             <div class="submit-section">
@@ -187,14 +187,14 @@
                 </div>
             </div>
         </div>
-        <!-- /Add Leave Modal -->
-        
-        <!-- Edit Leave Modal -->
-        <div id="edit_leave" class="modal custom-modal fade" role="dialog">
+        <!-- /Add Congés Modal -->
+
+        <!-- Edit Congés Modal -->
+        <div id="edit_Congés" class="modal custom-modal fade" role="dialog">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Edit Leave</h5>
+                        <h5 class="modal-title">Edit Congés</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -202,10 +202,10 @@
                     <div class="modal-body">
                         <form>
                             <div class="form-group">
-                                <label>Leave Type <span class="text-danger">*</span></label>
+                                <label>Congés Type <span class="text-danger">*</span></label>
                                 <select class="select">
-                                    <option>Select Leave Type</option>
-                                    <option>Casual Leave 12 Days</option>
+                                    <option>Select Type Congés </option>
+                                    <option>Congés Occasional 12 jr</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -221,15 +221,15 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label>Number of days <span class="text-danger">*</span></label>
+                                <label>Nbr de jr <span class="text-danger">*</span></label>
                                 <input class="form-control" readonly type="text" value="2">
                             </div>
                             <div class="form-group">
-                                <label>Remaining Leaves <span class="text-danger">*</span></label>
+                                <label>Congés Restant <span class="text-danger">*</span></label>
                                 <input class="form-control" readonly value="12" type="text">
                             </div>
                             <div class="form-group">
-                                <label>Leave Reason <span class="text-danger">*</span></label>
+                                <label>Raison <span class="text-danger">*</span></label>
                                 <textarea rows="4" class="form-control">Going to hospital</textarea>
                             </div>
                             <div class="submit-section">
@@ -240,16 +240,16 @@
                 </div>
             </div>
         </div>
-        <!-- /Edit Leave Modal -->
-        
-        <!-- Delete Leave Modal -->
+        <!-- /Edit Congés Modal -->
+
+        <!-- Delete Congés Modal -->
         <div class="modal custom-modal fade" id="delete_approve" role="dialog">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="form-header">
-                            <h3>Delete Leave</h3>
-                            <p>Are you sure want to Cancel this leave?</p>
+                            <h3>Delete Congés</h3>
+                            <p>Are you sure want to Cancel this Congés?</p>
                         </div>
                         <div class="modal-btn delete-action">
                             <div class="row">
@@ -265,7 +265,7 @@
                 </div>
             </div>
         </div>
-        <!-- /Delete Leave Modal -->
+        <!-- /Delete Congés Modal -->
 
     </div>
     <!-- /Page Wrapper -->

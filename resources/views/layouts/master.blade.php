@@ -9,6 +9,11 @@
 	<meta name="author" content="SoengSouy Admin Template">
 	<meta name="robots" content="noindex, nofollow">
 	<title>Dashboard</title>
+
+    <!-- for export -->
+    <link href="{{URL::to('assets1/css/plugins/dataTables/datatables.min.css')}}" rel="stylesheet">
+    <link href="{{URL::to('assets1/css/style.css')}}" rel="stylesheet">
+
 	<!-- Favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="{{ URL::to('assets/img/favicon.png') }}">
 	<!-- Bootstrap CSS -->
@@ -306,7 +311,7 @@
 					<div class="dropdown-menu">
 						<a class="dropdown-item" href="{{ route('profile_user') }}">Mon Profil</a>
 						<a class="dropdown-item" href="{{ route('company/settings/page') }}">Paramètres </a>
-						<a class="dropdown-item" href="{{ route('logout') }}">Déconnexion</a>
+						<a class="dropdown-item" href="logout">Déconnexion</a>
 					</div>
 				</li>
 			</ul>
@@ -320,7 +325,7 @@
 				<div class="dropdown-menu dropdown-menu-right">
 					<a class="dropdown-item" href="{{ route('profile_user') }}">Mon Profil</a>
 					<a class="dropdown-item" href="{{ route('company/settings/page') }}">Paramètres</a>
-					<a class="dropdown-item" href="{{ route('logout') }}">Déconnexion</a>
+					<a class="dropdown-item" href="logout">Déconnexion</a>
 				</div>
 			</div>
 			<!-- /Mobile Menu -->
@@ -335,6 +340,11 @@
 		<!-- /Page Wrapper -->
 	</div>
 	<!-- /Main Wrapper -->
+
+<!-- for export all -->
+<script src="{{URL::to('assets1/js/plugins/dataTables/datatables.min.js')}}"></script>
+<script src="{{URL::to('assets1/js/plugins/dataTables/dataTables.bootstrap4.min.js')}}"></script>
+
 
 	<!-- jQuery -->
 	<script src="{{ URL::to('assets/js/jquery-3.5.1.min.js') }}"></script>
@@ -361,6 +371,10 @@
 	<script src="{{ URL::to('assets/js/multiselect.min.js') }}"></script>
 	<!-- Custom JS -->
 	<script src="{{ URL::to('assets/js/app.js') }}"></script>
+
+
+
+
 	@yield('script')
 </body>
 </html>

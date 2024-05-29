@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
 @section('title', 'Home Ligne-Achat List')
 
@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="{{ asset('asset/assets/css/bootstrap.min.css') }}">
 </head>
 <body>
+    <div class="page-wrapper">
+        <div class="content container-fluid">
 
     <div class="container ">
         <div class="d-flex justify-content-between py-3">
@@ -78,7 +80,8 @@
 
     </div>
 
-
+        </div>
+    </div>
 </body>
 </html>
 <script>
@@ -88,3 +91,4 @@
         }
     }
 </script>
+@endsection

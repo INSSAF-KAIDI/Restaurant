@@ -43,9 +43,9 @@ class sizeController extends Controller
             $size = size::create($request->post());
 
             // Upload image here
-            
-            
-            return redirect()->route('admin/sizes')->with('success','size added successfully.');
+
+
+            return redirect()->route('sizes.index')->with('success','size added successfully.');
 
 
         } else {
@@ -55,7 +55,7 @@ class sizeController extends Controller
     }
 
     public function edit(size $size) {
-        //$size = size::findOrFail($id);       
+        //$size = size::findOrFail($id);
         return view('size.edit',['size' => $size]);
     }
 
@@ -67,13 +67,13 @@ class sizeController extends Controller
         ]);
 
         if ( $validator->passes() ) {
-           
+
 
             $size->fill($request->post())->save();
 
             // Upload image here
-          
-            return redirect()->route('admin/sizes')->with('success','size updated successfully.');
+
+            return redirect()->route('sizes.index')->with('success','size updated successfully.');
 
 
         } else {
@@ -83,13 +83,12 @@ class sizeController extends Controller
     }
 
     public function destroy(size $size, Request $request) {
-                       
+
         File::delete(public_path().'/uploads/sizes/'.$size->image);
-        $size->delete();        
-        return redirect()->route('admin/sizes')->with('success','size deleted successfully.');
+        $size->delete();
+        return redirect()->route('sizes.index')->with('success','size deleted successfully.');
     }
 }
 
 
 
-    

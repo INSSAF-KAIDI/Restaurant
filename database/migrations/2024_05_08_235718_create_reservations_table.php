@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
             $table->foreign('client_id')->references('id')->on('clients');
             $table->unsignedBigInteger('client_id')->nullable();
-            $table->string('NomClient');
+            $table->string('NomClient')->nullable();
             $table->foreign('table_id')->references('id')->on('tables');
             $table->unsignedBigInteger('table_id')->nullable();
-            $table->string('NumTable');
+            $table->string('NumTable')->nullable();
             $table->string('DateDemande')->nullable();
             $table->string('status')->nullable();
             $table->timestamps();

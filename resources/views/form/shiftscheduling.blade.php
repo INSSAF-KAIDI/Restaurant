@@ -4,16 +4,16 @@
     <!-- Page Wrapper -->
     <div class="page-wrapper">
         <div class="content container-fluid">
-        
+
             <!-- Page Header -->
             <div class="page-header">
                 <div class="row">
                     <div class="col">
-                        <h3 class="page-title">Daily Scheduling</h3>
+                        <h3 class="page-title">Planification quotidienne</h3>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
                             <li class="breadcrumb-item"><a href="{{ route('all/employee/list') }}">Employees</a></li>
-                            <li class="breadcrumb-item active">Shift Scheduling</li>
+                            <li class="breadcrumb-item active">Planification Shift</li>
                         </ul>
                     </div>
                     <div class="col-auto float-right ml-auto">
@@ -28,26 +28,14 @@
             <!-- Content Starts -->
             <!-- Search Filter -->
             <div class="row filter-row">
-                <div class="col-sm-6 col-md-3">  
+                <div class="col-sm-6 col-md-3">
                     <div class="form-group form-focus">
                         <input type="text" class="form-control floating">
                         <label class="focus-label">Employee</label>
                     </div>
                 </div>
-                
-                <div class="col-sm-6 col-md-3"> 
-                    <div class="form-group form-focus select-focus">
-                        <select class="select floating"> 
-                            <option>All Department</option>
-                            <option value="1">Finance</option>
-                            <option value="2">Finance and Management</option>
-                            <option value="3">Hr & Finance</option>
-                            <option value="4">ITech</option>
-                        </select>
-                        <label class="focus-label">Department</label>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-2">  
+
+                <div class="col-sm-6 col-md-2">
                     <div class="form-group form-focus focused">
                         <div class="cal-icon">
                             <input class="form-control floating datetimepicker" type="text">
@@ -55,7 +43,7 @@
                         <label class="focus-label">From</label>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-2">  
+                <div class="col-sm-6 col-md-2">
                     <div class="form-group form-focus focused">
                         <div class="cal-icon">
                             <input class="form-control floating datetimepicker" type="text">
@@ -63,9 +51,9 @@
                         <label class="focus-label">To</label>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-2">  
-                    <a href="#" class="btn btn-success btn-block"> Search </a>  
-                </div>     
+                <div class="col-sm-6 col-md-2">
+                    <a href="#" class="btn btn-success btn-block"> Search </a>
+                </div>
             </div>
             <!-- Search Filter -->
 
@@ -92,7 +80,7 @@
                                     <td>
                                         <h2 class="table-avatar">
                                             <a href="profile.html" class="avatar"><img alt="" src="{{ URL::to('assets/img/profiles/avatar-02.jpg') }}"></a>
-                                            <a href="profile.html">John Doe <span>Web Designer</span></a>
+                                            <a href="profile.html">John Doe</a>
                                         </h2>
                                     </td>
                                     <td>
@@ -100,7 +88,7 @@
                                             <h2>
                                                 <a href="#" data-toggle="modal" data-target="#edit_schedule" style="border:2px dashed #1eb53a">
                                                 <span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
-                                                <span class="userrole-info">Web Designer - SMARTHR</span>
+
                                                 </a>
                                             </h2>
                                         </div>
@@ -145,7 +133,7 @@
                                             <h2>
                                                 <a href="#" data-toggle="modal" data-target="#edit_schedule" style="border:2px dashed #1eb53a">
                                                 <span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
-                                                <span class="userrole-info">Web Designer - SMARTHR</span>
+
                                                 </a>
                                             </h2>
                                         </div>
@@ -169,10 +157,10 @@
                                     <td>
                                         <h2 class="table-avatar">
                                             <a href="profile.html" class="avatar"><img alt="" src="{{ URL::to('assets/img/profiles/avatar-09.jpg') }}"></a>
-                                            <a href="profile.html">Richard Miles <span>Web Developer</span></a>
+                                            <a href="profile.html">Richard Miles</a>
                                         </h2>
                                     </td>
-                                    
+
                                     <td>
                                         <div class="user-add-shedule-list">
                                             <a href="#" data-toggle="modal" data-target="#add_schedule">
@@ -184,9 +172,7 @@
                                         <div class="user-add-shedule-list">
                                             <h2>
                                                 <a href="#" data-toggle="modal" data-target="#edit_schedule" style="border:2px dashed #1eb53a">
-                                                <span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
-                                                <span class="userrole-info">Web Designer - SMARTHR</span>
-                                                </a>
+                                                <span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span></a>
                                             </h2>
                                         </div>
                                     </td>
@@ -218,7 +204,7 @@
                                             </a>
                                         </div>
                                     </td>
-                                    
+
                                     <td>
                                         <div class="user-add-shedule-list">
                                             <a href="#" data-toggle="modal" data-target="#add_schedule">
@@ -230,9 +216,7 @@
                                         <div class="user-add-shedule-list">
                                             <h2>
                                                 <a href="#" data-toggle="modal" data-target="#edit_schedule" style="border:2px dashed #1eb53a">
-                                                <span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
-                                                <span class="userrole-info">Web Designer - SMARTHR</span>
-                                                </a>
+                                                <span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span></a>
                                             </h2>
                                         </div>
                                     </td>
@@ -248,10 +232,10 @@
                                     <td>
                                         <h2 class="table-avatar">
                                             <a href="profile.html" class="avatar"><img alt="" src="{{ URL::to('assets/img/profiles/avatar-10.jpg') }}"></a>
-                                            <a href="profile.html">John Smith <span>Android Developer</span></a>
+                                            <a href="profile.html">John Smith</a>
                                         </h2>
                                     </td>
-                                    
+
                                     <td>
                                         <div class="user-add-shedule-list">
                                             <a href="#" data-toggle="modal" data-target="#add_schedule">
@@ -271,7 +255,6 @@
                                             <h2>
                                                 <a href="#" data-toggle="modal" data-target="#edit_schedule" style="border:2px dashed #1eb53a">
                                                 <span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
-                                                <span class="userrole-info">Web Designer - SMARTHR</span>
                                                 </a>
                                             </h2>
                                         </div>
@@ -302,7 +285,6 @@
                                             <h2>
                                                 <a href="#" data-toggle="modal" data-target="#edit_schedule" style="border:2px dashed #1eb53a">
                                                 <span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
-                                                <span class="userrole-info">Web Designer - SMARTHR</span>
                                                 </a>
                                             </h2>
                                         </div>
@@ -326,10 +308,9 @@
                                     <td>
                                         <h2 class="table-avatar">
                                             <a href="profile.html" class="avatar"><img alt="" src="{{ URL::to('assets/img/profiles/avatar-05.jpg') }}"></a>
-                                            <a href="profile.html">Mike Litorus <span>IOS Developer</span></a>
                                         </h2>
                                     </td>
-                                    
+
                                     <td>
                                         <div class="user-add-shedule-list">
                                             <a href="#" data-toggle="modal" data-target="#add_schedule">
@@ -356,7 +337,6 @@
                                             <h2>
                                                 <a href="#" data-toggle="modal" data-target="#edit_schedule" style="border:2px dashed #1eb53a">
                                                 <span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
-                                                <span class="userrole-info">Web Designer - SMARTHR</span>
                                                 </a>
                                             </h2>
                                         </div>
@@ -375,7 +355,7 @@
                                             </a>
                                         </div>
                                     </td>
-                                    
+
                                     <td>
                                         <div class="user-add-shedule-list">
                                             <a href="#" data-toggle="modal" data-target="#add_schedule">
@@ -395,7 +375,6 @@
                                             <h2>
                                                 <a href="#" data-toggle="modal" data-target="#edit_schedule" style="border:2px dashed #1eb53a">
                                                 <span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
-                                                <span class="userrole-info">Web Designer - SMARTHR</span>
                                                 </a>
                                             </h2>
                                         </div>
@@ -405,10 +384,10 @@
                                     <td>
                                         <h2 class="table-avatar">
                                             <a href="profile.html" class="avatar"><img alt="" src="{{ URL::to('assets/img/profiles/avatar-11.jpg') }}"></a>
-                                            <a href="profile.html">Wilmer Deluna <span>Team Leader</span></a>
+                                            <a href="profile.html">Wilmer Deluna</a>
                                         </h2>
                                     </td>
-                                    
+
                                     <td>
                                         <div class="user-add-shedule-list">
                                             <a href="#" data-toggle="modal" data-target="#add_schedule">
@@ -421,7 +400,6 @@
                                             <h2>
                                                 <a href="#" data-toggle="modal" data-target="#edit_schedule" style="border:2px dashed #1eb53a">
                                                 <span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
-                                                <span class="userrole-info">Web Designer - SMARTHR</span>
                                                 </a>
                                             </h2>
                                         </div>
@@ -459,7 +437,6 @@
                                             <h2>
                                                 <a href="#" data-toggle="modal" data-target="#edit_schedule" style="border:2px dashed #1eb53a">
                                                 <span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
-                                                <span class="userrole-info">Web Designer - SMARTHR</span>
                                                 </a>
                                             </h2>
                                         </div>
@@ -483,10 +460,10 @@
                                     <td>
                                         <h2 class="table-avatar">
                                             <a href="profile.html" class="avatar"><img alt="" src="{{ URL::to('assets/img/profiles/avatar-12.jpg') }}"></a>
-                                            <a href="profile.html">Jeffrey Warden <span>Web Developer</span></a>
+                                            <a href="profile.html">Jeffrey Warden</a>
                                         </h2>
                                     </td>
-                                    
+
                                     <td>
                                         <div class="user-add-shedule-list">
                                             <a href="#" data-toggle="modal" data-target="#add_schedule">
@@ -513,7 +490,6 @@
                                             <h2>
                                                 <a href="#" data-toggle="modal" data-target="#edit_schedule" style="border:2px dashed #1eb53a">
                                                 <span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
-                                                <span class="userrole-info">Web Designer - SMARTHR</span>
                                                 </a>
                                             </h2>
                                         </div>
@@ -532,7 +508,7 @@
                                             </a>
                                         </div>
                                     </td>
-                                    
+
                                     <td>
                                         <div class="user-add-shedule-list">
                                             <a href="#" data-toggle="modal" data-target="#add_schedule">
@@ -545,7 +521,6 @@
                                             <h2>
                                                 <a href="#" data-toggle="modal" data-target="#edit_schedule" style="border:2px dashed #1eb53a">
                                                 <span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
-                                                <span class="userrole-info">Web Designer - SMARTHR</span>
                                                 </a>
                                             </h2>
                                         </div>
@@ -562,7 +537,7 @@
                                     <td>
                                         <h2 class="table-avatar">
                                             <a href="profile.html" class="avatar"><img alt="" src="{{ URL::to('assets/img/profiles/avatar-13.jpg') }}"></a>
-                                            <a href="profile.html">Bernardo Galaviz <span>Web Developer</span></a>
+                                            <a href="profile.html">Bernardo Galaviz</a>
                                         </h2>
                                     </td>
                                     <td>
@@ -570,7 +545,6 @@
                                             <h2>
                                                 <a href="#" data-toggle="modal" data-target="#edit_schedule" style="border:2px dashed #1eb53a">
                                                 <span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
-                                                <span class="userrole-info">Web Designer - SMARTHR</span>
                                                 </a>
                                             </h2>
                                         </div>
@@ -615,7 +589,6 @@
                                             <h2>
                                                 <a href="#" data-toggle="modal" data-target="#edit_schedule" style="border:2px dashed #1eb53a">
                                                 <span class="username-info m-b-10">6:30 am - 9:30 pm ( 14 hrs 15 mins)</span>
-                                                <span class="userrole-info">Web Designer - SMARTHR</span>
                                                 </a>
                                             </h2>
                                         </div>
@@ -645,7 +618,7 @@
 
         </div>
         <!-- /Page Content -->
-     
+
         <!-- Add Schedule Modal -->
         <div id="add_schedule" class="modal custom-modal fade" role="dialog">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -659,19 +632,7 @@
                     <div class="modal-body">
                         <form>
                             <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label class="col-form-label">Department <span class="text-danger">*</span></label>
-                                        <select class="select">
-                                            <option value="">Select</option>
-                                            <option value="">Development</option>
-                                            <option value="1">Finance</option>
-                                            <option value="2">Finance and Management</option>
-                                            <option value="3">Hr & Finance</option>
-                                            <option value="4">ITech</option>
-                                        </select>
-                                    </div>
-                                </div>
+
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label class="col-form-label">Employee Name <span class="text-danger">*</span></label>
@@ -775,7 +736,7 @@
                                     </div>
                                 </div>
                             </div>
-                        
+
                             <div class="submit-section">
                                 <button class="btn btn-primary submit-btn">Submit</button>
                             </div>
@@ -785,7 +746,7 @@
             </div>
         </div>
         <!-- /Add Schedule Modal -->
-        
+
         <!-- Edit Schedule Modal -->
         <div id="edit_schedule" class="modal custom-modal fade" role="dialog">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -799,19 +760,7 @@
                     <div class="modal-body">
                         <form>
                             <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label class="col-form-label">Department <span class="text-danger">*</span></label>
-                                        <select class="select">
-                                            <option value="">Select</option>
-                                            <option selected value="">Development</option>
-                                            <option value="1">Finance</option>
-                                            <option value="2">Finance and Management</option>
-                                            <option value="3">Hr & Finance</option>
-                                            <option value="4">ITech</option>
-                                        </select>
-                                    </div>
-                                </div>
+                                
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label class="col-form-label">Employee Name <span class="text-danger">*</span></label>
@@ -906,19 +855,19 @@
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group wday-box">
-                                        
+
                                             <label class="checkbox-inline"><input type="checkbox" name="week_days[]" value="monday" class="days recurring" checked="" onclick="return false;"><span class="checkmark">M</span></label>
-        
+
                                             <label class="checkbox-inline"><input type="checkbox" name="week_days[]" value="tuesday" class="days recurring" checked="" onclick="return false;"><span class="checkmark">T</span></label>
-                                        
+
                                             <label class="checkbox-inline"><input type="checkbox" name="week_days[]" value="wednesday" class="days recurring" checked="" onclick="return false;"><span class="checkmark">W</span></label>
-                                        
+
                                             <label class="checkbox-inline"><input type="checkbox" name="week_days[]" value="thursday" class="days recurring" checked="" onclick="return false;"><span class="checkmark">T</span></label>
-                                        
+
                                             <label class="checkbox-inline"><input type="checkbox" name="week_days[]" value="friday" class="days recurring" checked="" onclick="return false;"><span class="checkmark">F</span></label>
-                                        
+
                                             <label class="checkbox-inline"><input type="checkbox" name="week_days[]" value="saturday" class="days recurring" onclick="return false;"><span class="checkmark">S</span></label>
-                                        
+
                                             <label class="checkbox-inline"><input type="checkbox" name="week_days[]" value="sunday" class="days recurring" onclick="return false;"><span class="checkmark">S</span></label>
                                     </div>
                                 </div>
@@ -953,7 +902,7 @@
                                     </div>
                                 </div>
                             </div>
-                        
+
                             <div class="submit-section">
                                 <button class="btn btn-primary submit-btn">Submit</button>
                             </div>

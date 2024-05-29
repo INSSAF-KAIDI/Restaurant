@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
 @section('title', 'Home Reservations List')
 
@@ -15,9 +15,10 @@
 </head>
 <body>
 
-
-    <div class="container ">
-        <div class="d-flex justify-content-between py-3">
+<div class="page-wrapper">
+    <div class="content container-fluid">
+        <div class="container ">
+            <div class="d-flex justify-content-between py-3">
             <div class="h4">Reservations</div>
             <div>
                 <a href="{{ route('reservation.create') }}" class="btn btn-primary">Create</a>
@@ -77,8 +78,9 @@
             {{ $reservations->links() }}
         </div>
 
+         </div>
     </div>
-
+</div>
 
 </body>
 </html>

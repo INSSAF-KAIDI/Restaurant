@@ -1,3 +1,8 @@
+@extends('layouts.master')
+
+@section('title', 'Create Category')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +13,8 @@
     <link rel="stylesheet" href="{{ asset('asset/assets/css/bootstrap.min.css') }}">
 </head>
 <body>
+    <div class="page-wrapper">
+        <div class="content container-fluid">
 
     <div class="container ">
         <div class="d-flex justify-content-between py-3">
@@ -26,16 +33,24 @@
 
 
                     <div class="mb-3">
-                        <label for="CategoryAlimentaire" class="form-label">CategoryAlimentaire</label>
-                        <select name="CategoryAlimentaire" id="CategoryAlimentaire" class="form-select
-                         @error('CategoryAlimentaire') is-invalid @enderror">
-                            <option value="">Choisir une category alimentaire</option>
-                            @foreach($CategoryAlimentaire as $CategoryAlimentaire)
-                            <option value="{{ $CategoryAlimentaire->id }}" {{ old('CategoryAlimentaire') == $CategoryAlimentaire->id ? "selected":'' }}>{{ $CategoryAlimentaire->CategoryAlimentaire }}</option>
+                        <label for="NomCategory" class="form-label">Nom Category</label>
+                        <select name="NomCategory" id="NomCategory" class="form-select
+                         @error('NomCategory') is-invalid @enderror">
+                            <option value="">Choisir une category </option>
+                            @foreach($Category as $Category)
+                            <option value="{{ $Category->id }}" {{ old('NomCategory') == $Category->id ? "selected":'' }}>{{ $Category->Category }}</option>
                             @endforeach
                         </select>
 
-                        @error('CategoryAlimentaire')
+                        @error('NomCategory')
+                            <p class="invalid-feedback">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="nomAliment" class="form-label">Nom d'Aliment</label>
+                        <input type="text" name="nomAliment" id="nomAliment" placeholder="Entrer nomAliment" class="form-control @error('nomAliment') is-invalid @enderror" value="{{ old('nomAliment') }}">
+                        @error('nomAliment')
                             <p class="invalid-feedback">{{ $message }}</p>
                         @enderror
                     </div>
@@ -87,6 +102,8 @@
         </form>
     </div>
 
-
+        </div>
+    </div>
 </body>
 </html>
+@endsection

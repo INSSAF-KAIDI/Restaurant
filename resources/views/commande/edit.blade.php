@@ -3,6 +3,7 @@
 @section('title', 'Edit Commande')
 
 @section('content')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +16,8 @@
 </head>
 <body>
 
+    <div class="page-wrapper">
+        <div class="content container-fluid">
 
     <div class="container ">
         <div class="d-flex justify-content-between py-3">
@@ -109,7 +112,8 @@
 
         </form>
     </div>
-
+    </div>
+    
 
 </body>
 </html>

@@ -48,7 +48,7 @@ class TableController extends Controller
                 // Upload image here
                 
                 
-                return redirect()->route('admin/tables')->with('success','table added successfully.');
+                return redirect()->route('tables.index')->with('success','table added successfully.');
     
     
             } else {
@@ -77,7 +77,7 @@ class TableController extends Controller
     
                 // Upload image here
               
-                return redirect()->route('admin/tables')->with('success','table updated successfully.');
+                return redirect()->route('tables.index')->with('success','table updated successfully.');
     
     
             } else {
@@ -90,7 +90,7 @@ class TableController extends Controller
                            
             File::delete(public_path().'/uploads/tables/'.$table->image);
             $table->delete();        
-            return redirect()->route('admin/tables')->with('success','table deleted successfully.');
+            return redirect()->route('tables.index')->with('success','table deleted successfully.');
         }
     }
     

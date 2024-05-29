@@ -11,12 +11,12 @@ return new class extends Migration
      *
      * @return void
      */
-          
+
     public function up()
     {
         Schema::create('tables', function (Blueprint $table) {
             $table->id();
-            $table->string('NumTable')->nullable();
+            $table->string('NumTable');
             $table->string('Capacite')->nullable();
             $table->string('Status')->nullable();
             $table->timestamps();

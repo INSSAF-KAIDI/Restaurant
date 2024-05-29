@@ -14,18 +14,14 @@
     <link rel="stylesheet" href="{{ asset('asset/assets/css/bootstrap.min.css') }}">
 </head>
 <body>
-
-    <!-- <div class="bg-dark py-3">
-        <div class="container">
-            <div class="h4 text-white">CRUD / FOOD_MANAGER</div>
-        </div>
-    </div> -->
+    <div class="page-wrapper">
+        <div class="content container-fluid">
 
     <div class="container ">
         <div class="d-flex justify-content-between py-3">
             <div class="h4">Category List</div>
             <div>
-                <a href="{{ route('admin/categories/create') }}" class="btn btn-primary">Add Category</a>
+                <a href="{{ route('categories.create') }}" class="btn btn-primary">Add Category</a>
             </div>
         </div>
         @if(Session::has('success'))
@@ -54,7 +50,7 @@
                             @if($category->image != '' && file_exists(public_path().'/uploads/categories/'.$category->image))
                             <img src="{{ url('uploads/categories/'.$category->image) }}" alt="" width="40" height="40" class="rounded-circle">
                             @else
-                            <img src="{{ url('assets/assets/images/no-image.png') }}" alt="" width="40" height="40" class="rounded-circle">
+                            <img src="{{ url('asset/assets/images/no-image.png') }}" alt="" width="40" height="40" class="rounded-circle">
                             @endif
                         </td>
                         <td>{{ $category->NomCategory}}</td>
@@ -88,7 +84,8 @@
 
     </div>
 
-
+        </div>
+    </div>
 </body>
 </html>
 <script>

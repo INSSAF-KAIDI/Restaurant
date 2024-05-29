@@ -20,7 +20,7 @@
                     <div class="card dash-widget">
                         <div class="card-body"> <span class="dash-widget-icon"><i class="fa fa-cubes"></i></span>
                             <div class="dash-widget-info">
-                                <h3>112</h3> <span>Nombre des Commandes </span>
+                                <h3>475</h3> <span>Nombre des Commandes </span>
                             </div>
                         </div>
                     </div>
@@ -29,7 +29,7 @@
                     <div class="card dash-widget">
                         <div class="card-body"> <span class="dash-widget-icon"><i class="fa fa-usd"></i></span>
                             <div class="dash-widget-info">
-                                <h3>44</h3> <span>Total des clients</span>
+                                <h3>173</h3> <span>Total des clients</span>
                             </div>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                     <div class="card dash-widget">
                         <div class="card-body"> <span class="dash-widget-icon"><i class="fa fa-diamond"></i></span>
                             <div class="dash-widget-info">
-                                <h3>37</h3> <span>Nombre des reservations</span>
+                                <h3>118</h3> <span>Nombre des reservations</span>
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@
                     <div class="card dash-widget">
                         <div class="card-body"> <span class="dash-widget-icon"><i class="fa fa-user"></i></span>
                             <div class="dash-widget-info">
-                                <h3>218</h3> <span>Commandes livées</span>
+                                <h3>357</h3> <span>Commandes livées</span>
                             </div>
                         </div>
                     </div>
@@ -67,7 +67,7 @@
                         <div class="col-md-6 text-center">
                             <div class="card">
                                 <div class="card-body">
-                                    <h3 class="card-title">Sales Overview</h3>
+                                    <h3 class="card-title">Ventes Overview</h3>
                                     <div id="line-charts"></div>
                                 </div>
                             </div>
@@ -143,7 +143,7 @@
                             <h5 class="card-title">Statistics</h5>
                             <div class="stats-list">
                                 <div class="stats-info">
-                                    <p>Today Leave <strong>4 <small>/ 65</small></strong></p>
+                                    <p>Today Leave <strong>4 <small>/ 20</small></strong></p>
                                     <div class="progress">
                                         <div class="progress-bar bg-primary" role="progressbar" style="width: 31%" aria-valuenow="31" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
@@ -155,7 +155,7 @@
                                     </div>
                                 </div>
                                 <div class="stats-info">
-                                    <p>Completed Projects <strong>85 <small>/ 112</small></strong></p>
+                                    <p>Completed Articles <strong>85 <small>/ 112</small></strong></p>
                                     <div class="progress">
                                         <div class="progress-bar bg-success" role="progressbar" style="width: 62%" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
@@ -221,7 +221,7 @@
                                 <div class="media align-items-center">
                                     <a href="profile.html" class="avatar"><img alt="" src="assets/img/user.jpg"></a>
                                     <div class="media-body">
-                                        <div class="text-sm my-0">Martin Lewis</div>
+                                        <div class="text-sm my-0">KAIDI INSSAF</div>
                                     </div>
                                 </div>
                                 <div class="row align-items-center mt-3">
@@ -234,7 +234,7 @@
                                 <div class="media align-items-center">
                                     <a href="profile.html" class="avatar"><img alt="" src="assets/img/user.jpg"></a>
                                     <div class="media-body">
-                                        <div class="text-sm my-0">Martin Lewis</div>
+                                        <div class="text-sm my-0">FADOUA MOUSSAMRA</div>
                                     </div>
                                 </div>
                                 <div class="row align-items-center mt-3">
@@ -270,7 +270,7 @@
                                         <tr>
                                             <td><a href="invoice-view.html">#INV-0001</a></td>
                                             <td>
-                                                <h2><a href="#">Global Technologies</a></h2>
+                                                <h2><a href="#">Global Restau</a></h2>
                                             </td>
                                             <td>11 Mar 2019</td>
                                             <td>$380</td>
@@ -327,7 +327,7 @@
                                         <tr>
                                             <td><a href="invoice-view.html">#INV-0001</a></td>
                                             <td>
-                                                <h2><a href="#">Global Technologies</a></h2> </td>
+                                                <h2><a href="#">Global Restau</a></h2> </td>
                                             <td>Paypal</td>
                                             <td>11 Mar 2019</td>
                                             <td>$380</td>
@@ -380,10 +380,10 @@
                                             <td>
                                                 <h2 class="table-avatar">
                                                     <a href="#" class="avatar"><img alt="" src="assets/img/profiles/avatar-19.jpg"></a>
-                                                    <a href="client-profile.html">Barry Cuda <span>CEO</span></a>
+                                                    <a href="client-profile.html">Amine Alami <span>CEO</span></a>
                                                 </h2>
                                             </td>
-                                            <td>barrycuda@example.com</td>
+                                            <td>aminealami@example.com</td>
                                             <td>
                                                 <div class="dropdown action-label">
                                                     <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"> <i class="fa fa-dot-circle-o text-success"></i> Active </a>
@@ -414,10 +414,10 @@
                                             <td>
                                                 <h2 class="table-avatar">
                                                     <a href="#" class="avatar"><img alt="" src="assets/img/profiles/avatar-19.jpg"></a>
-                                                    <a href="client-profile.html">Tressa Wexler <span>Manager</span></a>
+                                                    <a href="client-profile.html">Sanaa Farisi<span>Manager</span></a>
                                                 </h2>
                                             </td>
-                                            <td>tressawexler@example.com</td>
+                                            <td>farisiSanaa@example.com</td>
                                             <td>
                                                 <div class="dropdown action-label">
                                                     <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"> <i class="fa fa-dot-circle-o text-danger"></i> Inactive </a>
@@ -451,10 +451,10 @@
                                                     <a href="client-profile.html" class="avatar">
                                                         <img alt="" src="assets/img/profiles/avatar-07.jpg">
                                                     </a>
-                                                    <a href="client-profile.html">Ruby Bartlett <span>CEO</span></a>
+                                                    <a href="client-profile.html">Karim Saadi <span>CEO</span></a>
                                                 </h2>
                                              </td>
-                                            <td>rubybartlett@example.com</td>
+                                            <td>Saadi Karim@example.com</td>
                                             <td>
                                                 <div class="dropdown action-label">
                                                     <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"> <i class="fa fa-dot-circle-o text-danger"></i> Inactive </a>
@@ -488,10 +488,10 @@
                                                     <a href="client-profile.html" class="avatar">
                                                         <img alt="" src="assets/img/profiles/avatar-06.jpg">
                                                     </a>
-                                                    <a href="client-profile.html"> Misty Tison <span>CEO</span></a>
+                                                    <a href="client-profile.html"> Ahlam Naimi <span>CEO</span></a>
                                                 </h2>
                                             </td>
-                                            <td>mistytison@example.com</td>
+                                            <td>NaimiAhlam@example.com</td>
                                             <td>
                                                 <div class="dropdown action-label">
                                                     <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"> <i class="fa fa-dot-circle-o text-success"></i> Active </a>
@@ -565,13 +565,13 @@
                 <div class="col-md-6 d-flex">
                     <div class="card card-table flex-fill">
                         <div class="card-header">
-                            <h3 class="card-title mb-0">Recent Projects</h3> </div>
+                            <h3 class="card-title mb-0">Recent Articles</h3> </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table custom-table mb-0">
                                     <thead>
                                         <tr>
-                                            <th>Project Name </th>
+                                            <th>Articles Name </th>
                                             <th>Progress</th>
                                             <th class="text-right">Action</th>
                                         </tr>
@@ -638,7 +638,7 @@
                                         <tr>
                                             <td>
                                                 <h2>
-                                                    <a href="project-view.html">Video Calling App</a>
+                                                    <a href="project-view.html">Pizza HotDog</a>
                                                 </h2>
                                                 <small class="block text-ellipsis">
                                                     <span>3</span> <span class="text-muted">open tasks, </span>
@@ -667,7 +667,7 @@
                                         <tr>
                                             <td>
                                                 <h2>
-                                                    <a href="project-view.html">Hospital Administration</a>
+                                                    <a href="project-view.html">Biggest Burger</a>
                                                 </h2>
                                                 <small class="block text-ellipsis">
                                                     <span>12</span> <span class="text-muted">open tasks, </span>
@@ -696,7 +696,7 @@
                                         <tr>
                                             <td>
                                                 <h2>
-                                                    <a href="project-view.html">Digital Marketplace</a>
+                                                    <a href="project-view.html">Pstishuu</a>
                                                 </h2>
                                                 <small class="block text-ellipsis">
                                                     <span>7</span> <span class="text-muted">open tasks, </span>
@@ -728,7 +728,7 @@
                             </div>
                         </div>
                         <div class="card-footer">
-                            <a href="projects.html">View all projects</a>
+                            <a href="projects.html">View all Articles</a>
                         </div>
                     </div>
                 </div>

@@ -14,6 +14,8 @@
 
 </head>
 <body>
+    <div class="page-wrapper">
+        <div class="content container-fluid">
 
 
     <div class="container ">
@@ -89,8 +91,8 @@
 
         </form>
     </div>
-
-
+    </div>
+    
 </body>
 </html>
 @endsection

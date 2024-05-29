@@ -12,12 +12,8 @@
     <link rel="stylesheet" href="{{ asset('asset/assets/css/bootstrap.min.css') }}">
 </head>
 <body>
-
-    <!-- <div class="bg-dark py-3">
-        <div class="container">
-            <div class="h4 text-white">CRUD / FOOD_MANAGER</div>
-        </div>
-    </div> -->
+    <div class="page-wrapper">
+        <div class="content container-fluid">
 
     <div class="container ">
         <div class="d-flex justify-content-between py-3">
@@ -27,8 +23,7 @@
             </div>
         </div>
 
-        <!-- <form action="{{ route('categories.store') }}" method="post" enctype="multipart/form-data"> -->
-        <form action="{{ route('admin/categories/store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('categories.store') }}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="card border-0 shadow-lg">
                 <div class="card-body">
@@ -69,7 +64,7 @@
 
         </form>
     </div>
-
+</div>
 
 </body>
 </html>

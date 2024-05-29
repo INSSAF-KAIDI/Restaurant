@@ -21,7 +21,7 @@ class ReservationController extends Controller
         $reservations = Reservation::orderBy('id','DESC')->paginate(5);
 
         return view('reservation.index',['reservations' => $reservations]);
-        
+
     }
 
     public function create() {
@@ -38,31 +38,31 @@ class ReservationController extends Controller
         $validator = Validator::make($request->all(),[
             'DateDemande' => 'required',
             'status' => 'required',
-            
-            
+
+
         ]);
 
         if ( $validator->passes() ) {
 
-          
-               
+
+
             // "user_id"=>$user->id,
-         
+
             reservation::create([
-                
+
                 "client_id"=>$request->NomClient,
                 "table_id"=>$request->Numtable,
                 "DateDemande"=>$request->DateDemande,
                 "status"=>$request->status,
-               
-               
+
+
             ]);
 
-       
 
-            
-            
-            return redirect()->route('admin/reservation')->with('success','reservation added successfully.');
+
+
+
+            return redirect()->route('reservation.index')->with('success','reservation added successfully.');
 
 
         } else {
@@ -72,14 +72,14 @@ class ReservationController extends Controller
     }
 
     public function edit(reservation $reservation) {
-        //$reservation = reservation::findOrFail($id);  
+        //$reservation = reservation::findOrFail($id);
         $tables = Table::select("id","Numtable")->get();
         $clients = Client::select("id","NomClient")->get();
         $all = [
             "clients" =>  $clients,
             "tables" => $tables,
             'reservation' => $reservation,
-        ];    
+        ];
         return view('reservation.edit',$all);
     }
 
@@ -91,22 +91,22 @@ class ReservationController extends Controller
         ]);
 
         if ( $validator->passes() ) {
-           
+
             $reservation->update([
 
-                
+
                 "client_id"=>$request->NomClient,
                 "table_id"=>$request->Numtable,
                 "DateDemande"=>$request->DateDemande,
                 "status"=>$request->status,
-               
+
             ]);
 
-            
+
 
             // Upload image here
-          
-            return redirect()->route('admin/reservation')->with('success','reservation updated successfully.');
+
+            return redirect()->route('reservation.index')->with('success','reservation updated successfully.');
 
 
         } else {
@@ -116,9 +116,9 @@ class ReservationController extends Controller
     }
 
     function destroy(reservation $reservation, Request $request) {
-                       
+
         File::delete(public_path().'/uploads/reservations/'.$reservation->image);
-        $reservation->delete();        
-        return redirect()->route('admin/reservation')->with('success','reservation deleted successfully.');
+        $reservation->delete();
+        return redirect()->route('reservation.index')->with('success','reservation deleted successfully.');
     }
      }

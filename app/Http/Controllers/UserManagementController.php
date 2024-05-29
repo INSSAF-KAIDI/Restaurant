@@ -24,10 +24,8 @@ class UserManagementController extends Controller
         {
             $result      = DB::table('users')->get();
             $role_name   = DB::table('role_type_users')->get();
-            $position    = DB::table('position_types')->get();
-            $department  = DB::table('departments')->get();
             $status_user = DB::table('user_types')->get();
-            return view('usermanagement.user_control',compact('result','role_name','position','department','status_user'));
+            return view('usermanagement.user_control',compact('result','role_name','status_user'));
         }
         else
         {
@@ -43,8 +41,6 @@ class UserManagementController extends Controller
             $users      = DB::table('users')->get();
             $result     = DB::table('users')->get();
             $role_name  = DB::table('role_type_users')->get();
-            $position   = DB::table('position_types')->get();
-            $department = DB::table('departments')->get();
             $status_user = DB::table('user_types')->get();
 
             // search by name
@@ -98,7 +94,7 @@ class UserManagementController extends Controller
                                 ->get();
             }
 
-            return view('usermanagement.user_control',compact('users','role_name','position','department','status_user','result'));
+            return view('usermanagement.user_control',compact('users','role_name','status_user','result'));
         }
         else
         {
@@ -211,8 +207,6 @@ class UserManagementController extends Controller
             'email'     => 'required|string|email|max:255|unique:users',
             'phone'     => 'required|min:11|numeric',
             'role_name' => 'required|string|max:255',
-            'position'  => 'required|string|max:255',
-            'department'=> 'required|string|max:255',
             'status'    => 'required|string|max:255',
             'image'     => 'required|image',
             'password'  => 'required|string|min:8|confirmed',
@@ -232,8 +226,6 @@ class UserManagementController extends Controller
             $user->join_date    = $todayDate;
             $user->phone_number = $request->phone;
             $user->role_name    = $request->role_name;
-            $user->position     = $request->position;
-            $user->department   = $request->department;
             $user->status       = $request->status;
             $user->avatar       = $image;
             $user->password     = Hash::make($request->password);
@@ -257,9 +249,7 @@ class UserManagementController extends Controller
             $name         = $request->name;
             $email        = $request->email;
             $role_name    = $request->role_name;
-            $position     = $request->position;
             $phone        = $request->phone;
-            $department   = $request->department;
             $status       = $request->status;
 
             $dt       = Carbon::now();
@@ -290,9 +280,7 @@ class UserManagementController extends Controller
                 'name'         => $name,
                 'role_name'    => $role_name,
                 'email'        => $email,
-                'position'     => $position,
                 'phone_number' => $phone,
-                'department'   => $department,
                 'status'       => $status,
                 'avatar'       => $image_name,
             ];

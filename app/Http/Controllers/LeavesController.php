@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Brian2694\Toastr\Facades\Toastr;
 use App\Models\LeavesAdmin;
-use DB;
+use Illuminate\Support\Facades\DB;
 use DateTime;
 
 class LeavesController extends Controller
@@ -15,7 +15,7 @@ class LeavesController extends Controller
     {
         $leaves = DB::table('leaves_admins')
                     ->join('users', 'users.user_id', '=', 'leaves_admins.user_id')
-                    ->select('leaves_admins.*', 'users.position','users.name','users.avatar')
+                    ->select('leaves_admins.*','users.name','users.avatar')
                     ->get();
 
         return view('form.leaves',compact('leaves'));
@@ -46,7 +46,7 @@ class LeavesController extends Controller
             $leaves->day           = $days;
             $leaves->leave_reason  = $request->leave_reason;
             $leaves->save();
-            
+
             DB::commit();
             Toastr::success('Create new Leaves successfully :)','Success');
             return redirect()->back();
@@ -96,7 +96,7 @@ class LeavesController extends Controller
             LeavesAdmin::destroy($request->id);
             Toastr::success('Leaves admin deleted successfully :)','Success');
             return redirect()->back();
-        
+
         } catch(\Exception $e) {
 
             DB::rollback();

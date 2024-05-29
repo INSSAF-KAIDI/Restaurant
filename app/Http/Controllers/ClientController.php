@@ -1,14 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Exports\ClientExport;
 use App\Models\Client;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Hash;
-
+use Maatwebsite\Excel\Facades\Excel;
 class ClientController extends Controller
 {
     public function index() {
@@ -19,7 +19,7 @@ class ClientController extends Controller
     }
 
     public function create() {
-     
+
         return view('client.create');
     }
 
@@ -128,4 +128,41 @@ class ClientController extends Controller
         $client->delete();
         return redirect()->route('clients.index')->with('success','client deleted successfully.');
     }
-}
+
+    public function export(Request $request)
+
+    {
+        if($request->type=="xlsx"){
+
+           $extension="xlsx";
+           $exportFormat=\Maatwebsite\Excel\Excel::XLSX;
+
+        }
+            elseif($request->type=="csv"){
+
+                $extension="csv";
+                $exportFormat=\Maatwebsite\Excel\Excel::CSV;
+
+
+            }
+
+              elseif($request->type=="pdf"){
+
+                    $extension="pdf";
+                    $exportFormat=\Maatwebsite\Excel\Excel::MPDF;
+
+
+              }
+                  else{
+
+                       $extension="xlsx";
+                       $exportFormat=\Maatwebsite\Excel\Excel::XLSX;
+
+
+                  }
+
+        $filename='Clients-'.date('d-m-y').'.'.$extension;
+        return Excel::download(new ClientExport, $filename,$exportFormat);
+
+  }
+ }

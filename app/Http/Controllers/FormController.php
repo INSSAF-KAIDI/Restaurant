@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Brian2694\Toastr\Facades\Toastr;
-use App\Models\Staff;
+use Staff;
 use App\Models\User;
 use Haruncpi\LaravelIdGenerator\IdGenerator;
 use Illuminate\Support\Facades\DB;
@@ -42,8 +42,6 @@ class FormController extends Controller
             $sex          = $request->sex;
             $emailAddress = $request->emailAddress;
             $phone_number = $request->phone_number;
-            $position     = $request->position;
-            $department   = $request->department;
             $salary       = $request->salary;
 
             $update = [
@@ -54,8 +52,6 @@ class FormController extends Controller
                 'sex'           => $sex,
                 'email_address' => $emailAddress,
                 'phone_number'  => $phone_number,
-                'position'      => $position,
-                'department'    => $department,
                 'salary'        => $salary,
             ];
             Staff::where('id',$request->id)->update($update);
@@ -76,8 +72,6 @@ class FormController extends Controller
             'sex'          => 'required',
             'emailAddress' => 'required|string|email|max:255',
             'phone_number' => 'required|numeric|min:9',
-            'position'     => 'required|string|max:255',
-            'department'   => 'required|string|max:255',
             'salary'       => 'required|string|max:255',
         ]);
         try{
@@ -85,8 +79,6 @@ class FormController extends Controller
             $sex          = $request->sex;
             $emailAddress = $request->emailAddress;
             $phone_number = $request->phone_number;
-            $position     = $request->position;
-            $department   = $request->department;
             $salary       = $request->salary;
 
             $Staff = new Staff();
@@ -94,8 +86,6 @@ class FormController extends Controller
             $Staff->sex           = $sex;
             $Staff->email_address = $emailAddress;
             $Staff->phone_number  = $phone_number;
-            $Staff->position      = $position;
-            $Staff->department    = $department;
             $Staff->salary        = $salary;
             $Staff->save();
 

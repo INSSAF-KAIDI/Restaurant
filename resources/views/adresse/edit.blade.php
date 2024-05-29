@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="{{ asset('asset/assets/css/bootstrap.min.css') }}">
 </head>
 <body>
+    <div class="page-wrapper">
+        <div class="content container-fluid">
 
 
     <div class="container ">
@@ -65,6 +67,7 @@
         </form>
     </div>
 
-
+        </div>
+    </div>
 </body>
 </html>

@@ -52,9 +52,9 @@ class    ServeurController extends Controller
             $serveur = serveur::create($request->post());
 
             // Upload image here
-            
-            
-            return redirect()->route('admin/serveurs')->with('success','serveur added successfully.');
+
+
+            return redirect()->route('serveurs.index')->with('success','serveur added successfully.');
 
 
         } else {
@@ -64,7 +64,7 @@ class    ServeurController extends Controller
     }
 
     public function edit(serveur $serveur) {
-        //$serveur = serveur::findOrFail($id);       
+        //$serveur = serveur::findOrFail($id);
         return view('serveur.edit',['serveur' => $serveur]);
     }
     public function update(serveur $serveur, Request $request) {
@@ -75,17 +75,17 @@ class    ServeurController extends Controller
                     'telephone' => 'required',
                     'adresse' => 'required',
                     'status' => 'required',
-            
+
         ]);
 
         if ( $validator->passes() ) {
-           
+
 
             $serveur->fill($request->post())->save();
 
             // Upload image here
-          
-            return redirect()->route('admin/serveurs')->with('success','serveur updated successfully.');
+
+            return redirect()->route('serveurs.index')->with('success','serveur updated successfully.');
 
 
         } else {
@@ -93,12 +93,12 @@ class    ServeurController extends Controller
             return redirect()->route('serveurs.edit',$serveur->id)->withErrors($validator)->withInput();
         }
     }
-    
+
 
     public function destroy(serveur $serveur, Request $request) {
-                       
+
         File::delete(public_path().'/uploads/serveurs/'.$serveur->image);
-        $serveur->delete();        
-        return redirect()->route('admin/serveurs')->with('success','serveur deleted successfully.');
+        $serveur->delete();
+        return redirect()->route('serveurs.index')->with('success','serveur deleted successfully.');
     }
 }

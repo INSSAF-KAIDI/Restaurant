@@ -10,9 +10,9 @@ class Alimentaire extends Model
     use HasFactory;
     protected $guarded = [];
 
-    function CategoryAlimentaire()
+    function Category()
    {
-       return $this->belongsTo(CategoryAlimentaire::class, 'category_alimentaire_id');
+       return $this->belongsTo(Category::class, 'category_id');
    }
 
 }

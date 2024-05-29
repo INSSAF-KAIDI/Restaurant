@@ -49,13 +49,13 @@ class CategoryController extends Controller
                 $ext = $request->image->getClientOriginalExtension();
                 $newFileName = time().'.'.$ext;
                 $request->image->move(public_path().'/uploads/categories/',$newFileName); // This will save file in a folder
-                
+
                 $category->image = $newFileName;
                 $category->save();
             }
-            
+
             // return redirect()->route('categories.index')->with('success','Category added successfully.');
-            return redirect()->route('admin/categories')->with('success', 'Category added successfully');
+            return redirect()->route('categories.index')->with('success', 'Category added successfully');
 
 
         } else {
@@ -64,9 +64,9 @@ class CategoryController extends Controller
         }
     }
 
-   
+
     public function edit(Category $category) {
-        //$category = Category::findOrFail($id);       
+        //$category = Category::findOrFail($id);
         return view('category.edit',['category' => $category]);
     }
 
@@ -78,7 +78,7 @@ class CategoryController extends Controller
             // 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
         if ( $validator->passes() ) {
-           
+
 
             $category->fill($request->post())->save();
 
@@ -89,15 +89,15 @@ class CategoryController extends Controller
                 $ext = $request->image->getClientOriginalExtension();
                 $newFileName = time().'.'.$ext;
                 $request->image->move(public_path().'/uploads/categories/',$newFileName); // This will save file in a folder
-                
+
                 $category->image = $newFileName;
                 $category->save();
 
                 // File::delete(public_path().'/uploads/categories/'.$oldImage);
-            }            
+            }
 
             // return redirect()->route('categories.index')->with('success','Category updated successfully.');
-            return redirect()->route('admin/categories')->with('success', 'category updated successfully');
+            return redirect()->route('categories.index')->with('success', 'category updated successfully');
 
         } else {
             // return with errrors
@@ -106,10 +106,10 @@ class CategoryController extends Controller
     }
 
     public function destroy(Category $category, Request $request) {
-                       
+
         File::delete(public_path().'/uploads/categories/'.$category->image);
-        $category->delete();        
+        $category->delete();
         // return redirect()->route('categories.index')->with('success','Category deleted successfully.');
-        return redirect()->route('admin/categories')->with('success', 'category deleted successfully');
+        return redirect()->route('categories.index')->with('success', 'category deleted successfully');
     }
 }

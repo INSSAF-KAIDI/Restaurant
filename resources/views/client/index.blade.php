@@ -3,6 +3,7 @@
 @section('title', 'Home CLients List')
 
 @section('content')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,14 +11,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CRUD / FOOD_MANAGER</title>
+
+
+
+
     <link rel="stylesheet" href="{{ asset('asset/assets/css/bootstrap.min.css') }}">
 </head>
 <body>
 
-    
+    <div class="page-wrapper">
+        <div class="content container-fluid">
 
-
-    <div class="container ">
+   <div class="container ">
         <div class="d-flex justify-content-between py-3">
             <div class="h4">Clients List</div>
             <div>
@@ -33,14 +38,39 @@
 
         <div class="card border-0 shadow-lg">
             <div class="card-body">
+
+                <div class="row">
+
+                    <div class="col-md-5 mb-4">
+
+<form action="{{ url('clients/export')}}" method="GET">
+
+    <div class="input-group mt-3">
+      <select name="type" class="form-control">
+        <option value="">Select Type</option>
+        <option value="xlsx">XLSX</option>
+        <option value="csv">CSV</option>
+        <option value="pdf">PDF</option>
+      </select>
+      <button type="submit"  class="btn btn-success " style="margin-right: 10px;"> Export / Download</button>
+
+      <button onclick="window.print()" class="btn btn-warning ">Print</button>
+
+    </div>
+
+</form>
+                    </div>
+
+                </div>
+
                 <table class="table table-striped">
                     <tr>
                         <th width="30">ID</th>
-                        <th>NomClient</th>
+                        <th>Nom</th>
                         <th>PrenomClient</th>
                         <th>Email</th>
                         <th>Adresse</th>
-                        <th>Telephone</th>
+                        <th>Telephone</th>Client
                         <th>Status</th>
                         <th width="150">Action</th>
                     </tr>
@@ -74,6 +104,7 @@
                     @endif
 
                 </table>
+
             </div>
         </div>
 
@@ -82,10 +113,13 @@
         </div>
 
     </div>
+        </div>
+    </div>
 
 
 </body>
 </html>
+
 <script>
     function deleteClient(id) {
         if (confirm("Are you sure you want to delete?")) {
@@ -93,4 +127,6 @@
         }
     }
 </script>
+
+
 @endsection

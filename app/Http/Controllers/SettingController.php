@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\RolesPermissions;
 use Brian2694\Toastr\Facades\Toastr;
-use DB;
+use Illuminate\Support\Facades\DB;
 class SettingController extends Controller
 {
     // company/settings/page
@@ -13,8 +13,8 @@ class SettingController extends Controller
     {
         return view('settings.companysettings');
     }
-    
-    // Roles & Permissions 
+
+    // Roles & Permissions
     public function rolesPermissions()
     {
         $rolesPermissions = RolesPermissions::All();
@@ -27,7 +27,7 @@ class SettingController extends Controller
         $request->validate([
             'roleName' => 'required|string|max:255',
         ]);
-        
+
         DB::beginTransaction();
         try{
 
@@ -63,7 +63,7 @@ class SettingController extends Controller
         try{
             $id        = $request->id;
             $roleName  = $request->roleName;
-            
+
             $update = [
                 'id'               => $id,
                 'permissions_name' => $roleName,
@@ -87,7 +87,7 @@ class SettingController extends Controller
             RolesPermissions::destroy($request->id);
             Toastr::success('Role Name deleted successfully :)','Success');
             return redirect()->back();
-        
+
         }catch(\Exception $e){
             DB::rollback();
             Toastr::error('Role Name delete fail :)','Error');

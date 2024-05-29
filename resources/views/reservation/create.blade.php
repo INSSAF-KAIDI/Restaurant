@@ -1,6 +1,6 @@
-@extends('layouts.app')
-
+@extends('layouts.master')
 @section('title', 'Create Reservation')
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="{{ asset('asset/assets/css/bootstrap.min.css') }}">
 </head>
 <body>
-
+<div class="page-wrapper">
+   <div class="content container-fluid">
 
     <div class="container ">
         <div class="d-flex justify-content-between py-3">
@@ -82,14 +83,7 @@
                            @enderror
                     </div>
 
-
-
-
-
-
-
-
-                </div>
+               </div>
             </div>
 
             <button class="btn btn-primary mt-3">Save Reservation</button>
@@ -97,6 +91,8 @@
         </form>
     </div>
 
+   </div>
+</div>
 
 </body>
 </html>
