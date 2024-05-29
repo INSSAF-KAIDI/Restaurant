@@ -6,11 +6,11 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
-use Auth;
-use DB;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use Carbon\Carbon;
-use Session;
+use Illuminate\Support\Facades\Session;
 use Brian2694\Toastr\Facades\Toastr;
 
 class LoginController extends Controller
@@ -66,7 +66,7 @@ class LoginController extends Controller
 
         $dt         = Carbon::now();
         $todayDate  = $dt->toDayDateTimeString();
-        
+
         if (Auth::attempt(['email'=> $username,'password'=> $password,'status'=>'Active'])) {
             /** get session */
             $user = Auth::User();
@@ -80,10 +80,10 @@ class LoginController extends Controller
             Session::put('avatar', $user->avatar);
             Session::put('position', $user->position);
             Session::put('department', $user->department);
-            
+
             $activityLog = ['name'=> Session::get('name'),'email'=> $username,'description' => 'Has log in','date_time'=> $todayDate,];
             DB::table('activity_logs')->insert($activityLog);
-            
+
             Toastr::success('Login successfully :)','Success');
             return redirect()->intended('home');
         } else {

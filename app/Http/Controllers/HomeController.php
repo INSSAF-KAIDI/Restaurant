@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use Carbon\Carbon;
-use Illuminate\Support\Facades\PDF;
+use PDF;
 use App\Models\User;
 class HomeController extends Controller
 {

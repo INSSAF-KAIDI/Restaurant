@@ -9,7 +9,6 @@ use App\Models\Employee;
 use App\Models\department;
 use App\Models\User;
 use App\Models\module_permission;
-
 class EmployeeController extends Controller
 {
     // all employee card view
