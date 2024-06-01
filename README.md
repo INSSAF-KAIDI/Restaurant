@@ -1,6 +1,6 @@
-# hr_ms_laravel_9
+# laravel_9
 
-hr_ms_laravel_9
+laravel_9
 
 ## Getting started
 
